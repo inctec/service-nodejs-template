@@ -15,8 +15,12 @@
  - `docker build -t service-nodejs-template .`
 
 ## Run tests with docker while enforcing the pre-build of the image if required
-  - Configure the docker-compose environment variables with the infrastructure information (e.g. NATS and Redis server data)
+  - If you want to use different infrastructure services other than the containers started in the stack, configure the docker-compose environment variables accordingly (e.g. external NATS and Redis servers)
   - `docker-compose up --exit-code-from greeter --force-recreate --build`: build and run the stack and automatically stop the stack when the "greeter" container exits (i.e. done processing)
+
+## Run tests locally without docker
+  - `npm run test`
+To run the test locally you need to have the server infrastructure running separately (e.g. NATS, Redis, DB, ...)
 
 ## Use the infrastructure hosted by incontext.technology GmbH 
   - contact incontex.technology to get access
