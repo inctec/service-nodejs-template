@@ -5,9 +5,9 @@ import { ServiceBroker } from 'moleculer';
 import { v4 } from 'uuid';
 
 const broker = new ServiceBroker({
-  nodeID: 'app',
+  nodeID: 'test-app',
   transporter: config.get('transporter'),
-  logger: false,
+  logger: true,
 });
 
 /*
@@ -24,13 +24,13 @@ describe('device service test', () => {
       const deviceId = v4();
       const businessId = v4();
       // We use here the type `Record<string, any>` as generic type for an object structure
-      // The exact type of the call response should be used if known
+      // The exact type of the object should be used if well defined and known
       const expected: Record<string, any> = { deviceId, businessId, type: 'dummy' };
       const response = await broker.call<DEVICES_REGISTERED>('devices.register', {
         body: expected,
       });
       Object.keys(expected).forEach((e) => {
-        assert.strictEqual(expected[e], response[e]);
+        assert.strictEqual(expected[e], response[e as keyof DEVICES_REGISTERED]);
       });
     });
 
