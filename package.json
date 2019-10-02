@@ -35,9 +35,11 @@
     "@types/ioredis": "^4.0.17",
     "@types/node": "^12.7.5",
     "@types/ramda": "^0.26.21",
+    "@types/uuid": "^3.4.5",
     "@types/wait-on": "^3.2.0",
     "config": "^3.2.2",
     "dotenv": "^8.1.0",
+    "idn-sdk": "file:idn-sdk-1.0.2.tgz",
     "ioredis": "^4.14.0",
     "knex": "^0.19.4",
     "moleculer": "^0.13.9",
@@ -46,6 +48,7 @@
     "pg": "^7.12.1",
     "ramda": "^0.26.1",
     "typescript": "^3.6.3",
+    "uuid": "^3.3.3",
     "wait-on": "^3.3.0"
   },
   "engines": {

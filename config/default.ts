@@ -8,14 +8,14 @@ export = {
   },
 
   db: {
-      user: '',
-      port: '',
-      password: '',
-      host: '',
-      database: '',
-      url: '',
+    user: '',
+    port: '',
+    password: '',
+    host: '',
+    database: '',
+    url: '',
   },
 
-  transporter: 'nats://localhost:4222',
+  transporter: 'nats://unihd-ise-iiot.inctec.net:4222/',
 
 };
